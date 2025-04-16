@@ -1,0 +1,12 @@
+hr_attrition_project:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: postgres
+      password: postgresql
+      port: 5432
+      dbname: hr_attrition
+      schema: public
+      threads: 1
