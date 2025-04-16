@@ -54,34 +54,61 @@ This project simulates a real-world HR analytics scenario by:
 employee-attrition-pipeline/
 │
 ├── 📄 README.md                  # Project documentation
+
 ├── 📂 dbt/                       # dbt project (for data modeling)
+
 │   ├── 📄 dbt_project.yml        # dbt project config
+
 │   ├── 📄 profiles.yml           # profile for dbt connection
+
 │   ├── 📂 seeds/                 # Raw CSV data used in dbt
+
 │   │   └── WA_Fn-UseC_-HR-Employee-Attrition.csv
+
 │   └── 📂 models/                # dbt SQL models
+
 │       ├── 📂 staging/           # Cleaned & renamed raw tables
+
 │       │   └── stg_hr_employee_attrition.sql
+
 │       ├── 📂 intermediate/      # Feature transformations & joins
+
 │       │   └── int_hr_attrition_features.sql
+
 │       ├── 📂 final/             # Fact tables / dashboards inputs
+
 │       │   └── fct_attrition_summary.sql
+
 │       └── 📂 ml/                # ML predictions as dbt model
+
 │           └── ml_attrition_predictions.sql
+
 ├── 📂 ml_model/                  # Machine learning code
+
 │   ├── ⚙️ random_forest.py     # Script to infer and write back to DB
+
 │
 ├── 📂 sql_queries/               # Ad hoc and exploratory SQL
+
 │   └── exploratory_analysis.sql
+
 │
 ├── 📂 dashboards/                # Power BI files
+
 │   └── HR_SQL_dbt_pipeline.pbix  # Power BI report file
+
 │
 ├── 📂 docs/                      # Project documentation and screenshots
+
 │   └── 📂 powerbi_screenshots/   # Screenshots for README or blog
+
 │       ├── Page1.png
+
 │       ├── Page2.png
+
 │
 └── 📂 scripts/                    # Optional: automation scripts (e.g. .bash)
+
     └── refresh_pipeline.sh
+    
 
